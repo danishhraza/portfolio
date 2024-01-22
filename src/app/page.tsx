@@ -1,28 +1,21 @@
 "use client";
+import React, { useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { FileDown, Github, Linkedin, Instagram } from "lucide-react";
 import { Spotify } from "react-spotify-embed";
-import { motion } from "framer-motion";
-import Typewriter from "typewriter-effect";
-
-interface DraggableTextBoxProps {
-  text: string;
-}
-
-const DraggableTextBox: React.FC<DraggableTextBoxProps> = ({ text }) => {
-  return (
-    <motion.div
-      drag
-      dragConstraints={{ left: 0, right: 150, top: 0, bottom: 150 }}
-      whileHover={{ scale: 1.1 }}
-      className="flex text-white bg-blue-800 mx-auto p-1 rounded-lg"
-    >
-      {text}
-    </motion.div>
-  );
-};
+import TypewriterText from "@/components/TypewriterText";
+import DraggableTextBox from "@/components/DraggableTextBox";
 
 export default function Home() {
+  const voxalinkRef = useRef<HTMLDivElement>(null);
+
+  const scrollToVoxalink = () => {
+    if (voxalinkRef && voxalinkRef.current) {
+      voxalinkRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <main className="bg-[#000000]">
       <div className="flex justify-center py-[10rem] xl:mx-[20rem] lg:mx-[15rem] md:mx-[10rem] mx-[3rem]">
@@ -39,17 +32,8 @@ export default function Home() {
             </div>
             <div className="flex flex-col">
               <span className="text-[22px] text-white mt-5 flex">
-                <h1 className="font-bold text-[22px] text-transparent bg-clip-text bg-gradient-to-r from-[#E23E57] to-[#A91079]">
-                <Typewriter
-                  options={{
-                    strings: ["Full Stack Developer", "Aspiring ML Engineer", "Adventurer"],
-                    autoStart: true,
-                    loop: true,
-                  }}
-                />
-              </h1>
+                <TypewriterText />
               </span>
-
               <span className="text-[38px] text-white font-bold md:mt-10 mt-5">
                 Danish Raza
               </span>
@@ -58,33 +42,44 @@ export default function Home() {
               </span>
             </div>
           </div>
-          <div className="bg-gradient-to-br from-[#18181b] to-[#09090b] p-6 border border-green-500 rounded-[12px] flex flex-col gap-1 md:col-span-1 col-span-2 row-span-1 justify-between">
+          <div
+            onClick={scrollToVoxalink}
+            className="group bg-gradient-to-br from-[#18181b] to-[#09090b] p-6 border border-green-500 rounded-[12px] flex flex-col gap-1 md:col-span-1 col-span-2 row-span-1 justify-between transform transition-transform"
+          >
             <div className="flex justify-center">
               <Image
                 src="/images/projects.png"
                 alt="my image"
-                className="hover:scale-110 transition-transform"
+                className="group-hover:scale-110 transition-transform"
                 width={300}
                 height={300}
               />
             </div>
             <div className="flex flex-col">
               <span className="text-[16px] text-gray-400">Showcase</span>
-              <span className="text-[24px] text-white font-semibold">Projects</span>
+              <span className="text-[24px] text-white font-semibold">
+                Projects
+              </span>
             </div>
           </div>
           <div className="bg-gradient-to-br from-[#18181b] to-[#09090b] p-6 rounded-[12px] flex flex-col shadow-lg md:col-span-1 col-span-2 row-span-1 justify-between">
-            <div className="flex justify-center mt-4">
-              <FileDown
-                size={100}
-                className="text-green-500"
-                strokeWidth={0.7}
-              />
-            </div>
-            <div className="flex flex-col">
-              <span className="text-[16px] text-gray-400 mt-8">My CV/Resume</span>
-              <span className="text-[24px] text-white font-semibold">Download</span>
-            </div>
+            <Link href="Muhammad Danish Raza CV 2024.pdf" target="_blank">
+              <div className="flex justify-center mt-4">
+                <FileDown
+                  size={100}
+                  className="text-green-500"
+                  strokeWidth={0.7}
+                />
+              </div>
+              <div className="flex flex-col">
+                <span className="text-[16px] text-gray-400 mt-8">
+                  My CV/Resume
+                </span>
+                <span className="text-[24px] text-white font-semibold">
+                  Download
+                </span>
+              </div>
+            </Link>
           </div>
           <div className="bg-gradient-to-br from-[#18181b] to-[#09090b] p-6 rounded-[12px] flex flex-col justify-between gap-8 overflow-hidden col-span-2 row-span-1">
             <div className="flex flex-wrap gap-3">
@@ -108,51 +103,86 @@ export default function Home() {
               <span className="text-[16px] text-gray-400">
                 Languages/Softwares/Frameworks
               </span>
-              <span className="text-[24px] text-white font-semibold">Skills</span>
-            </div>
-          </div>
-          <div className="bg-gradient-to-br from-[#18181b] to-[#09090b] rounded-[12px] p-6 flex flex-col justify-between shadow-lg col-span-2 row-span-1">
-            <div className="flex justify-center mt-2">
-              <Image src="/images/voxalink.png" alt="" width={180} height={250}/>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-[16px] text-gray-400 mt-8">
-                Frontend Developer
-              </span>
               <span className="text-[24px] text-white font-semibold">
-                Voxalink Pro
+                Skills
               </span>
             </div>
           </div>
-          <div className="bg-gradient-to-br from-[#18181b] to-[#09090b] p-6 rounded-[12px] flex flex-col shadow-lg md:col-span-1 col-span-2 row-span-1 justify-between">
-            <div className="flex justify-center mt-6">
-              <Image src="/images/heuser.png" alt="" width={100} height={100}/>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-[16px] text-gray-400 mt-8">Full Stack Developer</span>
-              <span className="text-[24px] text-white font-semibold">Heuser Edu</span>
-            </div>  
+
+          <div
+            ref={voxalinkRef}
+            className="bg-gradient-to-br from-[#18181b] to-[#09090b] border border-green-500 rounded-[12px] p-6 flex flex-col justify-between shadow-lg col-span-2 row-span-1"
+          >
+            <Link href="/voxalinkpro">
+              <div className="flex justify-center mt-2">
+                <Image
+                  src="/images/voxalink.png"
+                  alt=""
+                  width={180}
+                  height={250}
+                />
+              </div>
+              <div className="flex flex-col">
+                <span className="text-[16px] text-gray-400 mt-8">
+                  Frontend Developer
+                </span>
+                <span className="text-[24px] text-white font-semibold">
+                  Voxalink Pro
+                </span>
+              </div>
+            </Link>
+          </div>
+
+          <div className="bg-gradient-to-br from-[#18181b] to-[#09090b] p-6 border border-green-500 rounded-[12px] flex flex-col shadow-lg md:col-span-1 col-span-2 row-span-1 justify-between">
+            <Link href="/heuser">
+              <div className="flex justify-center mt-6">
+                <Image
+                  src="/images/heuser.png"
+                  alt=""
+                  width={100}
+                  height={100}
+                />
+              </div>
+              <div className="flex flex-col">
+                <span className="text-[16px] text-gray-400 mt-8">
+                  Full Stack Developer
+                </span>
+                <span className="text-[24px] text-white font-semibold">
+                  Heuser Edu
+                </span>
+              </div>
+            </Link>
           </div>
           <div className="bg-gradient-to-br from-[#18181b] to-[#09090b] p-6 rounded-[12px] flex flex-col justify-between shadow-lg md:col-span-1 col-span-2 row-span-1">
             <div className="flex justify-center gap-4 mt-4">
-              <Github
-                size={35}
-                className="text-gray-200"
-                strokeWidth={0.7}
-              />
-              <Linkedin 
-                size={35}
-                className="text-gray-200"
-                strokeWidth={0.7}
-              />
-              <Instagram
-                size={35}
-                className="text-gray-200"
-                strokeWidth={0.7}
-              />
+              <Link href="https://github.com/danishhraza" target="_blank">
+                <Github size={35} className="text-gray-200" strokeWidth={0.7} />
+              </Link>
+              <Link
+                href="https://www.linkedin.com/in/danishhraza/"
+                target="_blank"
+              >
+                <Linkedin
+                  size={35}
+                  className="text-gray-200"
+                  strokeWidth={0.7}
+                />
+              </Link>
+              <Link
+                href="https://www.instagram.com/danishh.raza/"
+                target="_blank"
+              >
+                <Instagram
+                  size={35}
+                  className="text-gray-200"
+                  strokeWidth={0.7}
+                />
+              </Link>
             </div>
             <div className="flex flex-col">
-              <span className="text-[16px] text-gray-400 mt-8">Stay with me</span>
+              <span className="text-[16px] text-gray-400 mt-8">
+                Stay with me
+              </span>
               <span className="text-[20px] text-white font-semibold">
                 Socials
               </span>
@@ -161,9 +191,12 @@ export default function Home() {
           <div className="bg-gradient-to-br from-[#18181b] to-[#09090b] rounded-[12px] p-6 flex flex-col justify-between shadow-lg col-span-2 row-span-1">
             <span className="text-[20px] text-gray-300 font-light">
               On Repeat
-             </span>
+            </span>
             <div className="flex justify-center mt-2">
-            <Spotify wide link="https://open.spotify.com/track/5rLyYxZNzca00ENADO9m54?si=34bf30ab7e384a47" />
+              <Spotify
+                wide
+                link="https://open.spotify.com/track/5rLyYxZNzca00ENADO9m54?si=34bf30ab7e384a47"
+              />
             </div>
           </div>
         </section>
