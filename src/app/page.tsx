@@ -128,7 +128,7 @@ export default function Home() {
               </div>
               <div className="flex flex-col">
                 <span className="text-[16px] text-gray-400 mt-8">
-                  Project: Frontend Developer
+                  Frontend Developer
                 </span>
                 <span className="text-[24px] text-white font-semibold">
                   Voxalink Pro
@@ -153,7 +153,7 @@ export default function Home() {
               </div>
               <div className="flex flex-col">
                 <span className="text-[16px] text-gray-400 mt-8">
-                  Project: Full Stack Developer
+                  Full Stack Developer
                 </span>
                 <span className="text-[24px] text-white font-semibold">
                   Heuser Edu
