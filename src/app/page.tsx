@@ -111,8 +111,12 @@ export default function Home() {
 
           <div
             ref={voxalinkRef}
-            className="bg-gradient-to-br from-[#18181b] to-[#09090b] border border-green-500 rounded-[12px] p-6 flex flex-col justify-between shadow-lg col-span-2 row-span-1"
+            className="relative bg-gradient-to-br from-[#18181b] to-[#09090b] rounded-[12px] p-6 flex flex-col justify-between shadow-lg col-span-2 row-span-1"
           >
+            {/* New code for the added text */}
+            <span className="absolute top-0 left-0 text-[16px] text-green-500 mt-8 ml-8">
+              Project
+            </span>
             <Link href="/voxalinkpro">
               <div className="flex justify-center mt-2">
                 <Image
@@ -124,7 +128,7 @@ export default function Home() {
               </div>
               <div className="flex flex-col">
                 <span className="text-[16px] text-gray-400 mt-8">
-                  Frontend Developer
+                  Project: Frontend Developer
                 </span>
                 <span className="text-[24px] text-white font-semibold">
                   Voxalink Pro
@@ -133,7 +137,11 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="bg-gradient-to-br from-[#18181b] to-[#09090b] p-6 border border-green-500 rounded-[12px] flex flex-col shadow-lg md:col-span-1 col-span-2 row-span-1 justify-between">
+          <div className="relative bg-gradient-to-br from-[#18181b] to-[#09090b] p-6 rounded-[12px] flex flex-col shadow-lg md:col-span-1 col-span-2 row-span-1 justify-between">
+            {/* New code for the added text */}
+            <span className="absolute top-0 left-0 text-[16px] text-green-500 mt-8 ml-8">
+              Project
+            </span>
             <Link href="/heuser">
               <div className="flex justify-center mt-6">
                 <Image
@@ -145,7 +153,7 @@ export default function Home() {
               </div>
               <div className="flex flex-col">
                 <span className="text-[16px] text-gray-400 mt-8">
-                  Full Stack Developer
+                  Project: Full Stack Developer
                 </span>
                 <span className="text-[24px] text-white font-semibold">
                   Heuser Edu
