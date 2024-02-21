@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Inter } from "next/font/google";
 import localFont from "@next/font/local";
 import "./globals.css";
@@ -36,6 +37,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Script
+        strategy="lazyOnload"
+        src="https://www.googletagmanager.com/gtag/js?id=G-FF0D63K0YW"
+      />
+      <Script id="google-analytics" strategy="lazyOnload">
+        {`
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', 'G-FF0D63K0YW', {
+                    page_path: window.location.pathname,
+                    });
+                `}
+      </Script>
       <body className={`${leaguespartan.variable} font-sans`}>{children}</body>
     </html>
   );
