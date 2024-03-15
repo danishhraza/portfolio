@@ -18,7 +18,7 @@ export default function Home() {
 
   return (
     <main className="bg-[#000000]">
-      <div className="flex justify-center py-[10rem] xl:mx-[20rem] lg:mx-[15rem] md:mx-[10rem] mx-[3rem]">
+      <div className="flex justify-center py-[10rem] xl:mx-[20rem] lg:mx-[8rem] md:mx-[6rem] mx-[3rem]">
         <section className="grid md:grid-cols-3 grid-cols-2 gap-4">
           <div className="bg-gradient-to-br from-[#18181b] to-[#09090b] p-6 rounded-[12px] md:flex-row flex-col flex gap-5 col-span-2 row-span-1">
             <div className="flex justify-center">
@@ -109,6 +109,34 @@ export default function Home() {
             </div>
           </div>
 
+          <div className="relative bg-gradient-to-br from-[#18181b] to-[#09090b] p-6 rounded-[12px] shadow-lg col-span-2 md:col-span-1 row-span-2">
+            {/* New code for the added text */}
+            <span className="absolute top-0 left-0 text-[16px] text-green-500 mt-8 ml-8">
+              Project
+            </span>
+            <Link
+              href="/license-recognition"
+              className="flex flex-col justify-between"
+            >
+              <div className="flex justify-center mt-6">
+                <Image
+                  src="/images/license.png"
+                  alt=""
+                  width={190}
+                  height={190}
+                />
+              </div>
+              <div className="flex flex-col md:mt-[80px]">
+                <span className="text-[16px] text-gray-400 mt-8">
+                  ML Engineer
+                </span>
+                <span className="text-[24px] text-white font-semibold">
+                  License Plate Recognition
+                </span>
+              </div>
+            </Link>
+          </div>
+
           <div
             ref={voxalinkRef}
             className="relative bg-gradient-to-br from-[#18181b] to-[#09090b] rounded-[12px] p-6 flex flex-col justify-between shadow-lg col-span-2 row-span-1"
@@ -122,8 +150,8 @@ export default function Home() {
                 <Image
                   src="/images/voxalink.png"
                   alt=""
-                  width={180}
-                  height={250}
+                  width={130}
+                  height={200}
                 />
               </div>
               <div className="flex flex-col">
@@ -137,19 +165,14 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="relative bg-gradient-to-br from-[#18181b] to-[#09090b] p-6 rounded-[12px] flex flex-col shadow-lg md:col-span-1 col-span-2 row-span-1 justify-between">
+          <div className="relative bg-gradient-to-br from-[#18181b] to-[#09090b] p-6 rounded-[12px] flex flex-col shadow-lg md:col-span-2 col-span-2 row-span-1 justify-between">
             {/* New code for the added text */}
             <span className="absolute top-0 left-0 text-[16px] text-green-500 mt-8 ml-8">
               Project
             </span>
             <Link href="/heuser">
               <div className="flex justify-center mt-6">
-                <Image
-                  src="/images/heuser.png"
-                  alt=""
-                  width={100}
-                  height={100}
-                />
+                <Image src="/images/heuser.png" alt="" width={90} height={90} />
               </div>
               <div className="flex flex-col">
                 <span className="text-[16px] text-gray-400 mt-8">
@@ -160,6 +183,18 @@ export default function Home() {
                 </span>
               </div>
             </Link>
+          </div>
+
+          <div className="bg-gradient-to-br from-[#18181b] to-[#09090b] rounded-[12px] p-6 flex flex-col justify-between shadow-lg col-span-2 row-span-1">
+            <span className="text-[20px] text-gray-300 font-light">
+              On Repeat
+            </span>
+            <div className="flex justify-center mt-2">
+              <Spotify
+                wide
+                link="https://open.spotify.com/track/5rLyYxZNzca00ENADO9m54?si=34bf30ab7e384a47"
+              />
+            </div>
           </div>
           <div className="bg-gradient-to-br from-[#18181b] to-[#09090b] p-6 rounded-[12px] flex flex-col justify-between shadow-lg md:col-span-1 col-span-2 row-span-1">
             <div className="flex justify-center gap-4 mt-4">
@@ -194,17 +229,6 @@ export default function Home() {
               <span className="text-[20px] text-white font-semibold">
                 Socials
               </span>
-            </div>
-          </div>
-          <div className="bg-gradient-to-br from-[#18181b] to-[#09090b] rounded-[12px] p-6 flex flex-col justify-between shadow-lg col-span-2 row-span-1">
-            <span className="text-[20px] text-gray-300 font-light">
-              On Repeat
-            </span>
-            <div className="flex justify-center mt-2">
-              <Spotify
-                wide
-                link="https://open.spotify.com/track/5rLyYxZNzca00ENADO9m54?si=34bf30ab7e384a47"
-              />
             </div>
           </div>
         </section>
