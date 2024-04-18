@@ -192,7 +192,7 @@ export default function Home() {
             <div className="flex justify-center mt-2">
               <Spotify
                 wide
-                link="https://open.spotify.com/track/5rLyYxZNzca00ENADO9m54?si=34bf30ab7e384a47"
+                link="https://open.spotify.com/track/2rtkijCiF44Uy4EqBhOsQP?si=6599d20a0a3347b2"
               />
             </div>
           </div>
