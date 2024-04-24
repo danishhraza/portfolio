@@ -49,7 +49,7 @@ const Voxalinkpro = () => {
             developers all collaborating through GitHub!
           </p>
         </div>
-        <Link href="https://www.voxalinkpro.io/" target="_blank">
+        <Link href="https://voxalink.vercel.app/" target="_blank">
           <button className="text-white bg-green-600 mx-auto p-2 rounded-lg mt-4">
             Visit Site
           </button>
