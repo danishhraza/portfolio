@@ -98,6 +98,8 @@ export default function Home() {
               <DraggableTextBox text="Express.js" />
               <DraggableTextBox text="Github" />
               <DraggableTextBox text="Trello" />
+              <DraggableTextBox text="PowerBI" />
+              <DraggableTextBox text="Tableau" />
             </div>
             <div className="flex flex-col">
               <span className="text-[16px] text-gray-400">
