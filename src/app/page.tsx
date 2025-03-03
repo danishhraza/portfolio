@@ -63,7 +63,7 @@ export default function Home() {
             </div>
           </div>
           <div className="bg-gradient-to-br from-[#18181b] to-[#09090b] p-6 rounded-[12px] flex flex-col shadow-lg md:col-span-1 col-span-2 row-span-1 justify-between">
-            <Link href="Muhammad Danish Raza CV 2025.pdf" target="_blank">
+            <Link href="Muhammad Danish Raza Resume.pdf" target="_blank">
               <div className="flex justify-center mt-4">
                 <FileDown
                   size={100}
