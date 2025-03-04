@@ -12,7 +12,7 @@ const TypewriterText = () => {
               "Software Engineer",
               "Full Stack Developer",
               "Aspiring Cloud Engineer",
-              "Photographer"
+              "Visual Storyteller"
             ],
             autoStart: true,
             loop: true,
