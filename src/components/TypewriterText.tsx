@@ -5,7 +5,7 @@ import Typewriter from "typewriter-effect";
 const TypewriterText = () => {
   return (
     <div>
-      <h1 className="font-bold text-[20px] md:text-[35px] text-transparent bg-clip-text bg-gradient-to-r from-[#E23E57] to-[#d31497]">
+      <h1 className="font-bold text-[20px] md:text-[35px] text-transparent bg-clip-text bg-gradient-to-r from-[#3ee25c] to-[#138146]">
         <Typewriter
           options={{
             strings: [
