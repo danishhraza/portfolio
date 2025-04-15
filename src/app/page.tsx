@@ -22,13 +22,17 @@ export default function Home() {
         <section className="grid md:grid-cols-3 grid-cols-2 gap-4">
           <div className="bg-gradient-to-br from-[#18181b] to-[#09090b] p-6 rounded-[12px] md:flex-row flex-col flex gap-5 col-span-2 row-span-1">
             <div className="flex justify-center">
-              <Image
-                src="/images/Professional Image.jpg"
-                alt="Danish Raza"
-                className="rounded-br-2xl rounded-tl-2xl"
-                width={190}
-                height={190}
-              />
+            <Image
+  src="/images/Professional Image2.jpg"
+  alt="Danish Raza"
+  className="rounded-br-2xl rounded-tl-2xl"
+  width={220}
+  height={190}
+  style={{
+    objectFit: 'cover',
+    objectPosition: 'center'
+  }}
+/>
             </div>
             <div className="flex flex-col">
               <span className="text-[22px] text-white mt-5 flex">
