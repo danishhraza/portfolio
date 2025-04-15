@@ -9,9 +9,10 @@ const TypewriterText = () => {
         <Typewriter
           options={{
             strings: [
+              "Software Engineer",
               "Full Stack Developer",
-              "Aspiring ML Engineer",
-              "Adventurer",
+              "Aspiring Cloud Engineer",
+              "Visual Storyteller"
             ],
             autoStart: true,
             loop: true,

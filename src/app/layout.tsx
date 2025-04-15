@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Danish Raza",
   description:
-    "A software developer, aspiring ML engineer and an adventurer based in NY",
+    "A software developer, aspiring cloud engineer and an adventurer based in NY",
 };
 
 const leaguespartan = localFont({
