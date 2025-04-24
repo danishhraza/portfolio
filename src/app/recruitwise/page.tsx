@@ -12,12 +12,12 @@ const Voxalinkpro = () => {
             <ArrowLeft />
           </button>
         </Link>
-        <div className="flex justify-center mt-2 h-80">
+        <div className="flex justify-center mt-2 h-96">
           {" "}
           {/* Adjust the height as needed */}
           <div className="relative w-full h-full">
             <Image
-              src="/images/voxalinkbanner.png"
+              src="/images/recruitwisebanner.png"
               alt=""
               layout="fill"
               objectFit="cover"
@@ -27,29 +27,24 @@ const Voxalinkpro = () => {
         </div>
         <div className="flex flex-col">
           <span className="text-[16px] text-gray-400 mt-8">
-            Frontend Developer
+            Fullstack Developer
           </span>
           <span className="text-[24px] text-white font-semibold">
-            Voxalink Pro
+            RecruitWise.io
           </span>
         </div>
         <div className="mt-8">
           <p className="text-white">
-            Voxalink Pro is a SaaS Voice AI platform integrated with Blockchain
-            technology and it's very own ERC-20 token for monetization.
+            RecruitWise.io is a SaaS AI recruitment platform to handle all hiring process including batch AI interviews, candidate ranking, cheating detection, detailed interview result and etc
           </p>
           <p className="text-white mt-4">
-            My role in this project was to work on the front-end and make a
-            appealing user interface with web3 wallet functionality enabling
-            users to connect their crypto wallet and perform transactions as
-            well as sign blockchain contracts.
+            My role in this project was to work with a team of fullstack developers to build the platform using React, Tailwind CSS, ShadCn and Nest.js.
           </p>
           <p className="text-white mt-4">
-            This was a collaborative project with a team of experience
-            developers all collaborating through GitHub!
+            My final year project - backed by <span className="bg-gray-700 p-1">Folio3</span>
           </p>
         </div>
-        <Link href="https://voxalink.vercel.app/" target="_blank">
+        <Link href="https://recruitwise-frontend.vercel.app/" target="_blank">
           <button className="text-white bg-green-600 mx-auto p-2 rounded-lg mt-4">
             Visit Site
           </button>

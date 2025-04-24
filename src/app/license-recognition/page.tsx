@@ -8,7 +8,7 @@ const Voxalinkpro = () => {
     <div className="bg-[#000000] py-[11rem]">
       <div className="bg-gradient-to-br from-[#18181b] to-[#09090b] rounded-[12px] p-6 flex flex-col shadow-lg mx-10 lg:mx-[15rem] xl:mx-[20rem]">
         <Link href="/">
-          <button className="text-gray-100 bg-gray-900 py-2 px-6 rounded-lg absolute -translate-y-[89px]">
+          <button className="text-gray-100 bg-[#18181b] py-2 px-6 rounded-lg absolute -translate-y-[89px]">
             <ArrowLeft />
           </button>
         </Link>
